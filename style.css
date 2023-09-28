@@ -25,6 +25,7 @@ h1 {
   transition: all 0.2s ease-in-out;
   position: relative;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -48,4 +49,17 @@ h1 {
 
 .card.flip {
   transform: rotateY(180deg);
+}
+
+.btn {
+  width: 200px;
+  padding: 8px 12px;
+  outline: none;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
 }

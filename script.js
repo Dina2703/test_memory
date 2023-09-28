@@ -1,11 +1,20 @@
 const cards = document.querySelectorAll(".card");
+const restartBtn = document.querySelector(".btn");
 
 let hasFlippedCard = false;
 let lockBoard = false;
-let firstCard, secondCard;
+let firstCard = null;
+let secondCard = null;
+
+restartBtn.addEventListener("click", reset);
+
+function reset() {
+  location.reload();
+}
 
 function flipCard() {
   if (lockBoard) return;
+
   this.classList.add("flip");
 
   if (!hasFlippedCard) {
