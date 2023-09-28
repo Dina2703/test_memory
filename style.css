@@ -39,7 +39,6 @@ h1 {
 }
 
 .back {
-  background-color: blue;
   transform: rotateY(180deg);
 }
 
