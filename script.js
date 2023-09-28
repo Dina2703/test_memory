@@ -1,9 +1,11 @@
 const cards = document.querySelectorAll(".card");
 
 let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard() {
+  if (lockBoard) return;
   this.classList.add("flip");
 
   if (!hasFlippedCard) {
@@ -32,9 +34,11 @@ function disableCards() {
   secondCard.removeEventListener("click", flipCard);
 }
 function unFlipCards() {
+  lockBoard = true;
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
+    lockBoard = false;
   }, 1500);
 }
 
