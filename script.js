@@ -55,4 +55,11 @@ function unFlipCards() {
 // let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 // isMatch ? disableCards() : unflipCards();
 
+(function shuffle() {
+  cards.forEach((card) => {
+    let ramdomPos = Math.floor(Math.random() * 12);
+    card.style.order = ramdomPos;
+  });
+})();
+
 cards.forEach((card) => card.addEventListener("click", flipCard));
